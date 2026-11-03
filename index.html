@@ -1,233 +1,221 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050507">
-  <meta name="description" content="Red Frog Ultimate Ecosystem — منصة موحدة للاستراتيجية، الذكاء الاصطناعي، التسويق، والنمو الرقمي.">
-  <title>Red Frog Ultimate Ecosystem | نظام القيادة الذكية والنمو الآلي 2026</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
-      brand: { DEFAULT: '#ff3366', dark: '#cc0033', light: '#ff6688' },
-      darkBg: '#050507', cardBg: '#0e0e12', cardHover: '#14141c'
-    }, fontFamily: { cairo: ['Cairo', 'sans-serif'] } } } };
-  </script>
-  <style>
-    body { font-family: 'Cairo', sans-serif; background: #050507; color: #f3f4f6; overflow-x: hidden; }
-    .glass-panel { background: rgba(14,14,18,.82); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,.07); }
-    .glow-effect { box-shadow: 0 0 60px rgba(255,51,102,.15); }
-    .text-gradient { background: linear-gradient(135deg,#ff3366 0%,#ff9900 45%,#3b82f6 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .hero-bg { background: radial-gradient(circle at 80% 15%,rgba(255,51,102,.15),transparent 50%),radial-gradient(circle at 10% 85%,rgba(59,130,246,.1),transparent 50%); }
-    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-    :focus-visible { outline: 2px solid #ff6688; outline-offset: 3px; }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #050507; }
-    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #ff3366; }
-    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Frog Ultimate Ecosystem | نظام القيادة الذكية والنمو الآلي 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#ff3366',
+                            dark: '#cc0033',
+                            light: '#ff6688',
+                            glass: 'rgba(255, 51, 102, 0.08)'
+                        },
+                        darkBg: '#050507',
+                        cardBg: '#0e0e12',
+                        cardHover: '#14141c'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #050507; color: #f3f4f6; overflow-x: hidden; }
+        .glass-panel { background: rgba(14, 14, 18, 0.8); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.07); }
+        .glow-effect { box-shadow: 0 0 60px rgba(255, 51, 102, 0.15); }
+        .text-gradient { background: linear-gradient(135deg, #ff3366 0%, #ff9900 45%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-bg { background: radial-gradient(circle at 80% 15%, rgba(255, 51, 102, 0.15) 0%, transparent 50%), radial-gradient(circle at 10% 85%, rgba(59, 130, 246, 0.1) 0%, transparent 50%); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050507; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff3366; }
+    </style>
 </head>
 <body class="bg-darkBg text-gray-100 min-h-screen flex flex-col selection:bg-brand selection:text-white">
-  <header class="fixed top-0 inset-x-0 z-40 glass-panel border-b border-white/10 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3" aria-label="Red Frog Ultimate - الصفحة الرئيسية">
-        <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand to-orange-500 flex items-center justify-center glow-effect shadow-lg shadow-brand/25"><i class="fa-solid fa-frog text-white text-xl" aria-hidden="true"></i></span>
-        <span><span class="text-lg md:text-xl font-black tracking-wider text-white block leading-tight">RED FROG <span class="text-brand">ULTIMATE</span></span><span class="text-[9px] text-gray-400 tracking-widest uppercase font-semibold">Autonomous Growth Core</span></span>
-      </a>
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-gray-300" aria-label="التنقل الرئيسي">
-        <a href="#services" class="hover:text-brand transition">الخدمات الاستراتيجية</a>
-        <a href="#estimator" class="hover:text-brand transition">حاسبة العائد</a>
-        <a href="#viral-engine" class="hover:text-orange-400 transition text-orange-400"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i> محرك الانتشار</a>
-        <a href="#ai-hub" class="hover:text-brand transition text-brand"><i class="fa-solid fa-brain" aria-hidden="true"></i> مركز الذكاء الاصطناعي</a>
-        <a href="#dashboard" class="hover:text-brand transition">سجل العمليات</a>
-      </nav>
-      <button type="button" data-open-contact class="bg-brand hover:bg-brand-dark text-white px-4 md:px-6 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-brand/30 flex items-center gap-2"><i class="fa-solid fa-bolt" aria-hidden="true"></i> إطلاق مشروعك</button>
-    </div>
-  </header>
 
-  <main id="home">
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand to-orange-500 flex items-center justify-center glow-effect shadow-lg shadow-brand/25">
+                    <i class="fa-solid fa-frog text-white text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider text-white block leading-tight">RED FROG <span class="text-brand">ULTIMATE</span></span>
+                    <span class="text-[9px] text-gray-400 tracking-widest uppercase font-semibold">Autonomous Growth Core</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-7 space-x-reverse text-sm font-semibold text-gray-300">
+                <a href="#services" class="hover:text-brand transition">الخدمات الاستراتيجية</a>
+                <a href="#estimator" class="hover:text-brand transition">حاسبة العائد والتكلفة</a>
+                <a href="#viral-engine" class="hover:text-brand transition text-orange-400 flex items-center gap-1.5"><i class="fa-solid fa-bullhorn"></i> محرك الفيروسية</a>
+                <a href="#ai-hub" class="hover:text-brand transition text-brand flex items-center gap-1.5"><i class="fa-solid fa-brain animate-pulse"></i> مركز الذكاء الاصطناعي</a>
+                <a href="#dashboard" class="hover:text-brand transition">سجل العمليات</a>
+            </nav>
+
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button onclick="openContactModal()" class="bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-brand/30 flex items-center gap-2">
+                    <i class="fa-solid fa-bolt"></i> إطلاق مشروعك
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
     <section class="relative pt-36 pb-24 md:pt-48 md:pb-32 hero-bg overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold mb-6 shadow-inner"><i class="fa-solid fa-microchip" aria-hidden="true"></i> نظام موحد للاستراتيجية والذكاء الاصطناعي والنمو الرقمي</div>
-        <h1 class="text-4xl md:text-7xl font-black tracking-tight leading-tight mb-8">نظام بيئي يدمج الاستراتيجية،<br>الذكاء الاصطناعي، <span class="text-gradient">والنمو الرقمي</span></h1>
-        <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 mb-12 font-light leading-relaxed">منصة تجمع التخطيط، تحسين الظهور في البحث، وحملات الأداء لتساعد علامتك التجارية على بناء حضور مستدام واتخاذ قرارات مبنية على البيانات.</p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#estimator" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-brand/30 flex items-center justify-center gap-3"><i class="fa-solid fa-calculator" aria-hidden="true"></i> حاسبة العائد والتكلفة</a>
-          <a href="#viral-engine" class="w-full sm:w-auto glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold transition flex items-center justify-center gap-3">استكشف محرك النمو <i class="fa-solid fa-arrow-left text-xs" aria-hidden="true"></i></a>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold mb-6 shadow-inner">
+                <i class="fa-solid fa-microchip"></i> الجيل الأحدث من اقتصادات المنصات الرقمية والتسويق العصبي الفيروسي
+            </div>
+            <h1 class="text-4xl md:text-7xl font-black tracking-tight leading-tight mb-8">
+                نظام بيئي سيبراني يدمج الاقتصاد، <br>الذكاء الاصطناعي، <span class="text-gradient">والانتشار الفيروسي الآلي</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 mb-12 font-light leading-relaxed">
+                ندمج أحدث نظريات الاقتصاد السلوكي، تحسين محركات البحث بالذكاء الاصطناعي (GEO)، وحملات الأداء المرتفع لضمان هيمنة علامتك التجارية في السوق.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#estimator" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold text-base transition shadow-xl shadow-brand/30 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-calculator"></i> حاسبة العائد الاستثماري (ROI)
+                </a>
+                <a href="#viral-engine" class="w-full sm:w-auto glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold text-base transition border border-white/10 flex items-center justify-center gap-3">
+                    اختبار معامل الانتشار الفيروسي <i class="fa-solid fa-arrow-left text-xs"></i>
+                </a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="services" class="py-24 bg-cardBg/30 border-y border-white/5">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16"><h2 class="text-3xl md:text-4xl font-black mb-4">خدمات مؤسسية مبنية على <span class="text-brand">البيانات والإبداع</span></h2><p class="text-gray-400 text-sm md:text-base">نظم مترابطة تدعم النمو المستدام، وتساعد على تحسين الأداء وقياس النتائج.</p></div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <article class="glass-panel p-8 rounded-3xl hover:border-brand/50 transition group relative overflow-hidden"><div class="absolute top-0 right-0 w-32 h-32 bg-brand/5 rounded-full blur-2xl group-hover:bg-brand/15 transition"></div><div class="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-2xl mb-6 group-hover:scale-110 transition shadow-lg"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><h3 class="text-xl font-bold mb-3">الاستراتيجية وهندسة النمو</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">تحليل احتياجات السوق وسلوك العملاء، وبناء تموضع ونماذج نمو مناسبة لأهداف العمل.</p><ul class="space-y-2.5 text-xs text-gray-300"><li><i class="fa-solid fa-circle-check text-brand ml-2" aria-hidden="true"></i> فهم سلوك العملاء الرقمي</li><li><i class="fa-solid fa-circle-check text-brand ml-2" aria-hidden="true"></i> استراتيجيات التموضع والنمو</li></ul></article>
-          <article class="glass-panel p-8 rounded-3xl hover:border-orange-500/50 transition group relative overflow-hidden"><div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/15 transition"></div><div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 text-2xl mb-6 group-hover:scale-110 transition shadow-lg"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i></div><h3 class="text-xl font-bold mb-3">المحتوى وحملات الانتشار</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">تخطيط محتوى قابل للمشاركة وتجارب تساعد على زيادة التفاعل والوصول إلى جمهور جديد.</p><ul class="space-y-2.5 text-xs text-gray-300"><li><i class="fa-solid fa-circle-check text-orange-500 ml-2" aria-hidden="true"></i> تصميم حملات مشاركة مجتمعية</li><li><i class="fa-solid fa-circle-check text-orange-500 ml-2" aria-hidden="true"></i> تحسين التفاعل وقياس النتائج</li></ul></article>
-          <article class="glass-panel p-8 rounded-3xl hover:border-blue-500/50 transition group relative overflow-hidden"><div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/15 transition"></div><div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition shadow-lg"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div><h3 class="text-xl font-bold mb-3">تحسين الظهور في البحث</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">تحسين المحتوى والبنية الرقمية لزيادة فرص الظهور في محركات البحث التقليدية والتوليدية.</p><ul class="space-y-2.5 text-xs text-gray-300"><li><i class="fa-solid fa-circle-check text-blue-400 ml-2" aria-hidden="true"></i> تحسين محركات البحث SEO</li><li><i class="fa-solid fa-circle-check text-blue-400 ml-2" aria-hidden="true"></i> تحسين الظهور في محركات الإجابة GEO</li></ul></article>
+    <!-- Advanced Services Grid -->
+    <section id="services" class="py-24 bg-cardBg/30 border-t border-b border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-4">خدمات مؤسسية مبنية على <span class="text-brand">علوم العصر</span></h2>
+                <p class="text-gray-400 text-sm md:text-base">نظم عمل متصلة تضمن أعلى معدلات التحويل وأقصى نمو مستدام.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-3xl hover:border-brand/50 transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand/5 rounded-full blur-2xl group-hover:bg-brand/15 transition"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-2xl mb-6 group-hover:scale-110 transition shadow-lg">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">الاقتصاد السلوكي وهندسة النمو</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">تحليل دقيق لبيانات السوق، دراسة دوافع المستهلك العصبية، وبناء نماذج تسعير وتوزيع تعظم العائد على رأس المال.</p>
+                    <ul class="space-y-2.5 text-xs text-gray-300">
+                        <li><i class="fa-solid fa-circle-check text-brand ml-2"></i> نمذجة سلوك المستهلك الرقمي</li>
+                        <li><i class="fa-solid fa-circle-check text-brand ml-2"></i> استراتيجيات التموضع الاقتصادي</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl hover:border-brand/50 transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/15 transition"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 text-2xl mb-6 group-hover:scale-110 transition shadow-lg">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">الترويج الفيروسي وحملات الانتشار</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">هندسة حلقات الانتشار الفيروسي (Viral Loops) لصناعة محتوى ينتشر ذاتياً ويجذب آلاف العملاء بتكلفة اكتساب شبه معدومة.</p>
+                    <ul class="space-y-2.5 text-xs text-gray-300">
+                        <li><i class="fa-solid fa-circle-check text-orange-500 ml-2"></i> تصميم حملات الانتشار الذاتي</li>
+                        <li><i class="fa-solid fa-circle-check text-orange-500 ml-2"></i> تحسين معدلات المشاركة المجتمعية</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl hover:border-brand/50 transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/15 transition"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:scale-110 transition shadow-lg">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">تحسين محركات الذكاء (GEO & SEO)</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">تصدر نتائج البحث التقليدية ومحركات الذكاء الاصطناعي التوليدي لضمان ظهور علامتك كخيار أول أمام العملاء والمستثمرين.</p>
+                    <ul class="space-y-2.5 text-xs text-gray-300">
+                        <li><i class="fa-solid fa-circle-check text-blue-500 ml-2"></i> التوافق مع خوارزميات محركات البحث الحديثة</li>
+                        <li><i class="fa-solid fa-circle-check text-blue-500 ml-2"></i> هندسة الكلمات المفتاحية الذكية</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="estimator" class="py-24 relative">
-      <div class="max-w-5xl mx-auto px-6"><div class="glass-panel p-8 md:p-12 rounded-3xl glow-effect border border-brand/20">
-        <div class="text-center max-w-xl mx-auto mb-10"><span class="text-orange-400 font-bold text-xs bg-orange-500/10 px-3.5 py-1.5 rounded-full">حاسبة تخطيط توضيحية</span><h2 class="text-2xl md:text-3xl font-black mt-4 mb-2">تقدير الميزانية ومؤشر العائد</h2><p class="text-gray-400 text-sm">اختر ميزانية وقطاعاً لعرض مؤشر توضيحي فقط؛ النتائج ليست توقعاً مالياً أو ضماناً للعائد.</p></div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div><label for="budgetTier" class="block text-sm font-bold text-gray-300 mb-3">1. الميزانية التسويقية الشهرية:</label><select id="budgetTier" class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm"><option value="2000">باقة الانطلاق ($2,000 شهرياً)</option><option value="5000">باقة النمو ($5,000 شهرياً)</option><option value="12000">باقة التوسع ($12,000 شهرياً)</option></select></div>
-          <div><label for="sectorType" class="block text-sm font-bold text-gray-300 mb-3">2. القطاع المستهدف:</label><select id="sectorType" class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm"><option value="1.8">العقارات والتط��ير العمراني</option><option value="2.2">المنصات الرقمية والتجارة الإلكترونية</option><option value="1.5">الخدمات المهنية والمؤسسية B2B</option><option value="2.5">المنتجات الاستهلاكية</option></select></div>
+    <!-- Viral Loop & Economic Estimator Engine -->
+    <section id="viral-engine" class="py-24 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl glow-effect border border-brand/20">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-orange-400 font-bold text-xs uppercase tracking-widest bg-orange-500/10 px-3.5 py-1.5 rounded-full">محرك الترويج الفيروسي والاقتصادي</span>
+                    <h2 class="text-2xl md:text-3xl font-black mt-4 mb-2">حاسبة العائد الاستثماري ومعامل الانتشار</h2>
+                    <p class="text-gray-400 text-sm">أدخل حجم ميزانية التسويق المتوقعة ليتوقع النظام حجم العائد والانتشار الفيروسي بناءً على خوارزميات السوق.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-3">1. حجم الميزانية الاستثمارية الشهرية:</label>
+                        <select id="budgetTier" class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm focus:border-brand focus:outline-none transition">
+                            <option value="2000">باقة الانطلاق المؤسسي ($2,000 / شهرياً)</option>
+                            <option value="5000">باقة النمو والتوسع السريع ($5,000 / شهرياً)</option>
+                            <option value="12000">باقة الهيمنة السوقية الشاملة ($12,000 / شهرياً)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-3">2. القطاع المستهدف:</label>
+                        <select id="sectorType" class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm focus:border-brand focus:outline-none transition">
+                            <option value="1.8">العقارات والتطوير العمراني</option>
+                            <option value="2.2">المنصات الرقمية والتجارة الإلكترونية</option>
+                            <option value="1.5">الخدمات المهنية والمؤسسية B2B</option>
+                            <option value="2.5">المنتجات الاستهلاكية والترويج الفيروسي</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <span class="text-gray-400 text-xs block mb-1">العائد المتوقع والعامل الفيروسي (ROI):</span>
+                        <div class="text-4xl font-black text-orange-400" id="estimatedROI">3.6x <span class="text-xs text-gray-400 font-normal">عائد استثماري متوقع</span></div>
+                    </div>
+                    <button onclick="saveViralPlan()" class="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-brand hover:opacity-90 text-white px-8 py-4 rounded-2xl font-bold text-sm transition shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-rocket"></i> اعتماد الخطة وتسجيل الطلب
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6"><div><span class="text-gray-400 text-xs block mb-1">مؤشر تخطيطي افتراضي:</span><div class="text-4xl font-black text-orange-400" id="estimatedROI" aria-live="polite">3.0x <span class="text-xs text-gray-400 font-normal">مؤشر توضيحي فقط</span></div></div><button type="button" id="savePlan" class="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-brand hover:opacity-90 text-white px-8 py-4 rounded-2xl font-bold text-sm transition shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2"><i class="fa-solid fa-rocket" aria-hidden="true"></i> حفظ الخطة محلياً</button></div>
-        <p class="text-gray-500 text-xs mt-5">هذا المؤشر التجريبي لا يستند إلى بيانات سوق أو نموذج تنبؤ فعلي، ولا يمثل عائداً مضموناً. يلزم تحليل متخصص لتقدير النتائج.</p>
-      </div></div>
     </section>
 
-    <section id="viral-engine" class="py-20 bg-cardBg/30 border-y border-white/5"><div class="max-w-5xl mx-auto px-6 text-center"><span class="text-orange-400 text-xs font-bold">تخطيط المحتوى والنمو</span><h2 class="text-2xl md:text-3xl font-black mt-3 mb-4">صمّم تجارب تستحق المشاركة</h2><p class="max-w-2xl mx-auto text-sm text-gray-400 leading-relaxed">الانتشار لا يمكن ضمانه. ابدأ بفهم احتياجات جمهورك، وقدّم قيمة واضحة، ثم اختبر صيغ المحتوى وقِس التفاعل لتحسين حملاتك.</p><a href="#ai-hub" class="inline-flex mt-7 items-center gap-2 text-brand hover:text-brand-light font-bold text-sm">أنشئ تصوراً أولياً <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a></div></section>
+    <!-- AI Innovation Hub Section -->
+    <section id="ai-hub" class="py-24 bg-cardBg/50 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="w-full md:w-1/2">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-4">
+                        <i class="fa-solid fa-brain"></i> محرك التحليل والتنبؤ الذكي
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black mb-6">المساعد الاستراتيجي الذكي للأسواق</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        اكتب فكرة مشروعك أو نشاطك، وسيقوم النظام الذكي بتوليد دراسة جدوى مبدئية، تحديد استراتيجية الانتشار الفيروسي، واقتراح الخطوات التشغيلية فورا.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fa-solid fa-circle-check text-brand"></i> تحليل مؤشرات المنافسة والفرص غير المستغلة
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-gray-300">
+                            <i class="fa-solid fa-circle-check text-brand"></i> توليد خطة تسويق عصبي موجهة للجمهور المستهدف
+                        </div>
+                    </div>
+                </div>
 
-    <section id="ai-hub" class="py-24 bg-cardBg/50 border-t border-white/5">
-      <div class="max-w-7xl mx-auto px-6"><div class="flex flex-col md:flex-row items-center justify-between gap-12">
-        <div class="w-full md:w-1/2"><div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-4"><i class="fa-solid fa-brain" aria-hidden="true"></i> مساعد تخطيط تجريبي</div><h2 class="text-3xl md:text-4xl font-black mb-6">المساعد الاستراتيجي للأسواق</h2><p class="text-gray-400 text-sm leading-relaxed mb-6">اكتب فكرة مشروعك للحصول على إطار تفكير أولي وأسئلة تساعد على بدء التخطيط. هذه المحاكاة لا تحلل السوق ولا تتصل بنموذج ذكاء اصطناعي.</p><div class="space-y-3 mb-8"><div class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-circle-check text-brand" aria-hidden="true"></i> تحديد افتراضات تحتاج إلى تحقق</div><div class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-circle-check text-brand" aria-hidden="true"></i> اقتراح خطوات أولية لاختبار الفكرة</div></div></div>
-        <div class="w-full md:w-1/2 glass-panel p-6 md:p-8 rounded-3xl border border-white/10 shadow-xl"><label for="aiPromptInput" class="block text-xs font-bold text-gray-300 mb-2">اكتب تفاصيل مشروعك أو فكرتك:</label><textarea id="aiPromptInput" rows="4" maxlength="1000" class="w-full bg-darkBg border border-white/10 rounded-2xl p-4 text-white text-sm mb-4" placeholder="مثال: شركة طاقة متجددة تريد تعريف العملاء بخدماتها..."></textarea><button type="button" id="runAi" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:opacity-90 text-white py-3.5 rounded-2xl font-bold text-sm transition flex items-center justify-center gap-2"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> إنشاء إطار تخطيط مبدئي</button><div id="aiResultBox" class="mt-4 p-5 rounded-2xl bg-darkBg/90 border border-white/10 text-sm text-gray-200 hidden leading-relaxed" aria-live="polite"></div></div>
-      </div></div>
-    </section>
-
-    <section id="dashboard" class="py-20 border-t border-white/5"><div class="max-w-7xl mx-auto px-6"><div class="flex items-center justify-between mb-8"><div><h2 class="text-xl font-black text-white">سجل الخطط المحفوظة</h2><p class="text-xs text-gray-400">تُخزن الخطط في هذا المتصفح فقط، ولا تُرسل إلى خادم.</p></div><button type="button" id="clearDashboard" class="text-xs text-red-400 hover:text-red-300 transition">مسح السجل</button></div><div class="glass-panel p-4 md:p-6 rounded-3xl overflow-x-auto"><table class="w-full min-w-[640px] text-right text-xs text-gray-300"><thead><tr class="border-b border-white/10 text-gray-400"><th scope="col" class="pb-3 px-4">رقم المرجع</th><th scope="col" class="pb-3 px-4">الخطة أو الميزانية</th><th scope="col" class="pb-3 px-4">المؤشر التوضيحي</th><th scope="col" class="pb-3 px-4">التاريخ والوقت</th><th scope="col" class="pb-3 px-4">الحالة</th></tr></thead><tbody id="savedProjectsTable"><tr><td colspan="5" class="py-6 text-center text-gray-500">جارٍ تحميل السجل...</td></tr></tbody></table></div></div></section>
-  </main>
-
-  <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true"><div class="glass-panel p-8 md:p-10 rounded-3xl max-w-lg w-full mx-4 border border-brand/30 relative shadow-2xl max-h-[90vh] overflow-y-auto"><button type="button" id="closeModal" class="absolute top-5 left-5 text-gray-400 hover:text-white text-xl" aria-label="إغلاق النافذة"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><h2 id="modalTitle" class="text-2xl font-black mb-2 text-white">ابدأ مشروعك معنا</h2><p class="text-gray-400 text-xs mb-6">سجل بياناتك. هذا النموذج تجريبي ولا يرسل البيانات إلى خادم.</p><form id="contactForm" class="space-y-4"><div><label for="clientName" class="block text-xs font-bold text-gray-300 mb-1.5">الاسم الكريم</label><input type="text" id="clientName" name="name" autocomplete="name" required class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm" placeholder="الاسم الكامل"></div><div><label for="clientContact" class="block text-xs font-bold text-gray-300 mb-1.5">رقم الهاتف أو البريد الإلكتروني</label><input type="text" id="clientContact" name="contact" required class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm" placeholder="البريد الإلكتروني أو رقم الهاتف"></div><div><label for="clientNotes" class="block text-xs font-bold text-gray-300 mb-1.5">ملاحظات أو متطلبات خاصة</label><textarea id="clientNotes" name="notes" rows="3" class="w-full bg-darkBg border border-white/10 rounded-2xl p-4 text-white text-sm" placeholder="اذكر أي تفاصيل إضافية..."></textarea></div><button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white py-4 rounded-2xl font-bold text-sm transition flex items-center justify-center gap-2"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> التحقق من الطلب</button></form><p id="formNotice" class="hidden mt-4 text-sm text-green-400" role="status">تم التحقق من البيانات محلياً فقط. لم يتم إرسالها؛ يلزم ربط النموذج بخدمة خلفية لإتمام الإرسال.</p></div></div>
-
-  <footer class="mt-auto py-12 border-t border-white/10 bg-darkBg text-center text-xs text-gray-500"><div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"><div class="flex items-center gap-2"><span class="w-6 h-6 rounded-lg bg-brand flex items-center justify-center text-white"><i class="fa-solid fa-frog" aria-hidden="true"></i></span><span class="font-bold text-gray-300">RED FROG ULTIMATE ECOSYSTEM</span></div><p>جميع الحقوق محفوظة © 2026 — حلول رقمية واستراتيجية متكاملة.</p></div></footer>
-
-  <script>
-    const budgetSelect = document.getElementById('budgetTier');
-    const sectorSelect = document.getElementById('sectorType');
-    const roiDisplay = document.getElementById('estimatedROI');
-    const storageKey = 'redFrogEcosystem';
-
-    function updateROI() {
-      const budget = Number(budgetSelect.value);
-      const sectorFactor = Number(sectorSelect.value);
-      const index = (sectorFactor * 1.65).toFixed(1);
-      roiDisplay.innerHTML = `${index}x <span class="text-xs text-gray-400 font-normal">مؤشر افتراضي — ميزانية $${budget.toLocaleString('en-US')}</span>`;
-      return index;
-    }
-    budgetSelect.addEventListener('change', updateROI);
-    sectorSelect.addEventListener('change', updateROI);
-
-    function readSavedPlans() {
-      try {
-        const records = JSON.parse(localStorage.getItem(storageKey) || '[]');
-        return Array.isArray(records) ? records.filter(item => item && typeof item.id === 'string' && typeof item.plan === 'string' && typeof item.roi === 'string' && typeof item.date === 'string' && typeof item.status === 'string').slice(0, 50) : [];
-      } catch (_) { return []; }
-    }
-    function renderSavedProjects() {
-      const tbody = document.getElementById('savedProjectsTable');
-      tbody.replaceChildren();
-      const saved = readSavedPlans();
-      if (!saved.length) {
-        const row = document.createElement('tr');
-        const cell = document.createElement('td');
-        cell.colSpan = 5;
-        cell.className = 'py-6 text-center text-gray-500';
-        cell.textContent = 'لا توجد خطط محفوظة حتى الآن. استخدم الحاسبة أعلاه.';
-        row.appendChild(cell);
-        tbody.appendChild(row);
-        return;
-      }
-      saved.forEach(item => {
-        const row = document.createElement('tr');
-        row.className = 'border-b border-white/5 hover:bg-white/5 transition';
-        [item.id, item.plan, item.roi, item.date, item.status].forEach((value, index) => {
-          const cell = document.createElement('td');
-          cell.className = 'py-3 px-4';
-          if (index === 0) cell.classList.add('font-bold', 'text-brand');
-          if (index === 2) cell.classList.add('font-bold', 'text-orange-400');
-          cell.textContent = value;
-          row.appendChild(cell);
-        });
-        tbody.appendChild(row);
-      });
-    }
-    function saveViralPlan() {
-      const index = updateROI();
-      const now = new Date();
-      const record = {
-        id: `RF-${now.getTime().toString().slice(-8)}`,
-        plan: budgetSelect.options[budgetSelect.selectedIndex].text,
-        roi: `${index}x مؤشر توضيحي`,
-        date: `${now.toLocaleDateString('ar-EG')} ${now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' })}`,
-        status: 'محفوظ محلياً'
-      };
-      try {
-        const saved = readSavedPlans();
-        saved.unshift(record);
-        localStorage.setItem(storageKey, JSON.stringify(saved.slice(0, 50)));
-        renderSavedProjects();
-        alert('تم حفظ الخطة محلياً في سجل هذا المتصفح.');
-      } catch (_) { alert('تعذر الحفظ. تحقق من إعدادات التخزين في المتصفح.'); }
-    }
-    document.getElementById('savePlan').addEventListener('click', saveViralPlan);
-    document.getElementById('clearDashboard').addEventListener('click', () => {
-      if (confirm('هل تريد مسح سجل الخطط المحفوظة محلياً؟')) {
-        try { localStorage.removeItem(storageKey); } catch (_) { /* Storage may be unavailable. */ }
-        renderSavedProjects();
-      }
-    });
-    updateROI();
-    renderSavedProjects();
-
-    document.getElementById('runAi').addEventListener('click', () => {
-      const prompt = document.getElementById('aiPromptInput').value.trim();
-      const result = document.getElementById('aiResultBox');
-      result.replaceChildren();
-      result.classList.remove('hidden');
-      if (!prompt) { result.textContent = 'الرجاء إدخال فكرة المشروع أو النشاط أولاً.'; return; }
-      const title = document.createElement('strong');
-      title.className = 'text-blue-400 block mb-2';
-      title.textContent = 'إطار تفكير توضيحي — ليس تحليلاً فعلياً أو استشارة مالية';
-      const intro = document.createElement('p');
-      intro.textContent = 'ابدأ باختبار افتراضات المشروع مع عملاء محتملين، واجمع بيانات موثوقة قبل اتخاذ قرارات استثمارية أو تسويقية.';
-      const list = document.createElement('ul');
-      list.className = 'mt-3 space-y-2';
-      [
-        'حدد الجمهور والمشكلة التي يحاول المشروع حلها.',
-        'راجع المنافسين والمصادر المتاحة، وتحقق من حجم الطلب.',
-        'اختبر رسالة وقناة تسويقية بميزانية صغيرة، ثم قِس النتائج.'
-      ].forEach((text, index) => {
-        const item = document.createElement('li');
-        item.textContent = `• الخطوة ${index + 1}: ${text}`;
-        list.appendChild(item);
-      });
-      result.append(title, intro, list);
-    });
-
-    const modal = document.getElementById('contactModal');
-    let previousFocus = null;
-    function openContactModal() {
-      previousFocus = document.activeElement;
-      modal.classList.remove('hidden');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('overflow-hidden');
-      document.getElementById('clientName').focus();
-    }
-    function closeContactModal() {
-      modal.classList.add('hidden');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('overflow-hidden');
-      if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
-    }
-    document.querySelectorAll('[data-open-contact]').forEach(button => button.addEventListener('click', openContactModal));
-    document.getElementById('closeModal').addEventListener('click', closeContactModal);
-    modal.addEventListener('click', event => { if (event.target === modal) closeContactModal(); });
-    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeContactModal(); });
-    document.getElementById('contactForm').addEventListener('submit', event => {
-      event.preventDefault();
-      document.getElementById('formNotice').classList.remove('hidden');
-    });
-  </script>
-</body>
-</html>
+                <div class="w-full md:w-1/2 glass-panel p-6 md:p-8 rounded-3xl border border-white/10 shadow-xl">
+                    <label class="block text-xs font-bold text-gray-400 mb-2">اكتب تفاصيل مشروعك أو فكرتك هنا:</label>
+                    <textarea id="aiPromptInput" rows="4" class="w-full bg-darkBg border border-white/10 rounded-2xl p-4 text-white
