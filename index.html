@@ -1,177 +1,222 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0a0a0c">
-  <meta name="description" content="Red Frog Elite توحد الاستراتيجية، الهوية الإبداعية، الإنتاج المرئي، والتسويق الرقمي في تجربة واحدة.">
-  <title>Red Frog Elite | المستقبل الرقمي والتطوير المتكامل</title>
+  <meta name="theme-color" content="#070709">
+  <meta name="description" content="Red Frog Elite AI — منصة موحدة للاستراتيجية، والإبداع، والإنتاج المرئي، والتسويق الرقمي.">
+  <title>Red Frog Elite AI | نظام الإدارة والحلول الرقمية المستقبلية</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <script>
-    tailwind.config = { theme: { extend: { colors: {
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
       brand: { DEFAULT: '#ff3366', dark: '#cc0033', light: '#ff6688' },
-      darkBg: '#0a0a0c', cardBg: '#121218'
+      darkBg: '#070709', cardBg: '#101015', cardHover: '#16161f'
     }, fontFamily: { cairo: ['Cairo', 'sans-serif'] } } } };
   </script>
   <style>
-    body { font-family: 'Cairo', sans-serif; background: #0a0a0c; color: #f3f4f6; overflow-x: hidden; }
-    .glass-panel { background: rgba(18,18,24,.78); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.08); }
-    .glow-effect { box-shadow: 0 0 40px rgba(255,51,102,.15); }
-    .text-gradient { background: linear-gradient(135deg,#ff3366 0%,#ff9900 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .hero-bg { background: radial-gradient(circle at 80% 20%,rgba(255,51,102,.15),transparent 40%),radial-gradient(circle at 20% 80%,rgba(59,130,246,.1),transparent 40%); }
+    body { font-family: 'Cairo', sans-serif; background: #070709; color: #f3f4f6; overflow-x: hidden; }
+    .glass-panel { background: rgba(16,16,21,.78); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,.06); }
+    .glow-effect { box-shadow: 0 0 50px rgba(255,51,102,.12); }
+    .text-gradient { background: linear-gradient(135deg,#ff3366 0%,#ff9900 50%,#3b82f6 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-bg { background: radial-gradient(circle at 75% 20%,rgba(255,51,102,.12),transparent 45%),radial-gradient(circle at 15% 85%,rgba(59,130,246,.08),transparent 45%); }
     html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
     :focus-visible { outline: 2px solid #ff6688; outline-offset: 3px; }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0a0a0c; }
-    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #070709; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #ff3366; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
   </style>
 </head>
-<body class="bg-darkBg text-gray-100 min-h-screen flex flex-col">
+<body class="bg-darkBg text-gray-100 min-h-screen flex flex-col selection:bg-brand selection:text-white">
   <header class="fixed top-0 inset-x-0 z-40 glass-panel border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3" aria-label="Red Frog Elite - الصفحة الرئيسية">
-        <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand to-orange-500 flex items-center justify-center glow-effect"><i class="fa-solid fa-frog text-white text-xl" aria-hidden="true"></i></span>
-        <span class="text-xl md:text-2xl font-black tracking-wider text-white">RED FROG <span class="text-brand">ELITE</span></span>
+        <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand to-orange-500 flex items-center justify-center glow-effect shadow-lg shadow-brand/20"><i class="fa-solid fa-frog text-white text-xl" aria-hidden="true"></i></span>
+        <span><span class="text-xl font-black tracking-wider text-white block leading-tight">RED FROG <span class="text-brand">ELITE</span></span><span class="text-[10px] text-gray-400 tracking-widest uppercase font-semibold">Autonomous System</span></span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300" aria-label="التنقل الرئيسي">
         <a href="#services" class="hover:text-brand transition">الخدمات الاستراتيجية</a>
         <a href="#estimator" class="hover:text-brand transition">حاسبة المشاريع الذكية</a>
-        <a href="#ai-hub" class="hover:text-brand transition text-brand"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> مركز الابتكار</a>
+        <a href="#ai-hub" class="hover:text-brand transition text-brand"><i class="fa-solid fa-microchip" aria-hidden="true"></i> مركز الابتكار الذكي</a>
+        <a href="#dashboard" class="hover:text-brand transition">سجل العمليات</a>
       </nav>
-      <button type="button" data-open-contact class="bg-brand hover:bg-brand-dark text-white px-4 md:px-6 py-2.5 rounded-xl font-bold text-sm transition">ابدأ مشروعك الآن</button>
+      <button type="button" data-open-contact class="bg-brand hover:bg-brand-dark text-white px-4 md:px-6 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-brand/25 flex items-center gap-2"><i class="fa-solid fa-rocket" aria-hidden="true"></i> ابدأ مشروعك</button>
     </div>
   </header>
 
   <main id="home">
-    <section class="relative pt-36 pb-20 md:pt-48 md:pb-32 hero-bg overflow-hidden">
+    <section class="relative pt-36 pb-24 md:pt-48 md:pb-32 hero-bg overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold mb-6"><i class="fa-solid fa-bolt" aria-hidden="true"></i> الجيل القادم من الحلول الرقمية والتسويقية المتكاملة</div>
-        <h1 class="text-4xl md:text-7xl font-black tracking-tight leading-tight mb-8">رؤيتك، ابتكارك، ونموك<br>تحت <span class="text-gradient">رؤية استراتيجية واحدة</span></h1>
-        <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 mb-12 font-light leading-relaxed">ندمج التخطيط الاستراتيجي، التصميم الإبداعي، الإنتاج المرئي، وحملات النمو المدعومة بالذكاء الاصطناعي لنقل علامتك التجارية إلى مستوى استثنائي.</p>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold mb-6"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> الجيل القادم من الحلول الرقمية المدعومة بالذكاء الاصطناعي</div>
+        <h1 class="text-4xl md:text-7xl font-black tracking-tight leading-tight mb-8">نظام بيئي ذكي يدمج الاستراتيجية،<br>الإبداع، والنمو <span class="text-gradient">في تجربة واحدة</span></h1>
+        <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 mb-12 font-light leading-relaxed">ندمج التخطيط المتقدم، التصميم السينمائي، والتحليلات لنقل علامتك التجارية إلى آفاق جديدة من النمو والكفاءة.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#estimator" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-brand/30 flex items-center justify-center gap-3"><i class="fa-solid fa-calculator" aria-hidden="true"></i> احسب تكلفة مشروعك فوراً</a>
-          <a href="#services" class="w-full sm:w-auto glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold transition flex items-center justify-center gap-3">استكشف الخدمات <i class="fa-solid fa-arrow-left text-xs" aria-hidden="true"></i></a>
+          <a href="#estimator" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-brand/30 flex items-center justify-center gap-3"><i class="fa-solid fa-calculator" aria-hidden="true"></i> حاسبة التكلفة والمدة</a>
+          <a href="#ai-hub" class="w-full sm:w-auto glass-panel hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold transition flex items-center justify-center gap-3">استكشف المحاكي الاستراتيجي <i class="fa-solid fa-arrow-left text-xs" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
 
-    <section id="services" class="py-24 bg-cardBg/30 border-y border-white/5">
+    <section id="services" class="py-24 bg-cardBg/40 border-y border-white/5">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16"><h2 class="text-3xl md:text-4xl font-black mb-4">خدمات متكاملة <span class="text-brand">تتخطى التوقعات</span></h2><p class="text-gray-400">نظام بيئي متصل يربط الاستراتيجية بالتنفيذ لضمان أقصى أثر لنمو أعمالك.</p></div>
+        <div class="text-center max-w-2xl mx-auto mb-16"><h2 class="text-3xl md:text-4xl font-black mb-4">خدمات مؤسسية <span class="text-brand">مصممة للنمو</span></h2><p class="text-gray-400 text-sm md:text-base">نظم عمل متصلة تربط الاستراتيجية بالتنفيذ وتساعد على تحقيق أثر قابل للقياس.</p></div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <article class="glass-panel p-8 rounded-2xl hover:border-brand/50 transition group relative overflow-hidden">
-            <div class="w-14 h-14 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-chess" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold mb-3">الاستراتيجية والهوية البصرية</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">هندسة العلامات التجارية، بناء الهوية الشاملة، وصياغة الرسائل وأنظمة التصميم التي تترجم شخصية علامتك.</p>
-            <ul class="space-y-2 text-xs text-gray-300"><li><i class="fa-solid fa-check text-brand ml-2" aria-hidden="true"></i> استراتيجية التموضع في السوق</li><li><i class="fa-solid fa-check text-brand ml-2" aria-hidden="true"></i> دليل الهوية البصرية الشامل</li></ul>
-          </article>
-          <article class="glass-panel p-8 rounded-2xl hover:border-orange-500/50 transition group">
-            <div class="w-14 h-14 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-video" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold mb-3">الإنتاج المرئي والسينمائي</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">إعلانات عالية الجودة، رسوم متحركة وموشن جرافيك، ومحتوى تفاعلي يعرض منتجاتك باحترافية.</p>
-            <ul class="space-y-2 text-xs text-gray-300"><li><i class="fa-solid fa-check text-orange-500 ml-2" aria-hidden="true"></i> تصوير وإنتاج إعلانات تجارية</li><li><i class="fa-solid fa-check text-orange-500 ml-2" aria-hidden="true"></i> موشن جرافيك وتأثيرات بصرية</li></ul>
-          </article>
-          <article class="glass-panel p-8 rounded-2xl hover:border-blue-500/50 transition group">
-            <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold mb-3">التسويق الرقمي ونمو الأداء</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">حملات إعلانية مدعومة بالبيانات، إدارة قنوات التواصل، وتحسين معدلات التحويل للوصول إلى جمهورك.</p>
-            <ul class="space-y-2 text-xs text-gray-300"><li><i class="fa-solid fa-check text-blue-400 ml-2" aria-hidden="true"></i> إعلانات موجهة وحملات أداء</li><li><i class="fa-solid fa-check text-blue-400 ml-2" aria-hidden="true"></i> تقارير تحليل وتحسين دورية</li></ul>
-          </article>
+          <article class="glass-panel p-8 rounded-3xl hover:border-brand/50 transition group relative overflow-hidden"><div class="absolute top-0 right-0 w-32 h-32 bg-brand/5 rounded-full blur-2xl group-hover:bg-brand/15 transition"></div><div class="w-14 h-14 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-chess-queen" aria-hidden="true"></i></div><h3 class="text-xl font-bold mb-3">الاستراتيجية وهندسة العلامة</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">بناء أسس متينة للعلامة التجارية، وصياغة لغة الخطاب وتحديد نقاط التميز التنافسي.</p><ul class="space-y-2.5 text-xs text-gray-300"><li><i class="fa-solid fa-circle-check text-brand ml-2" aria-hidden="true"></i> دراسة الجمهور وتصميم رحلة العميل</li><li><i class="fa-solid fa-circle-check text-brand ml-2" aria-hidden="true"></i> دليل الهوية المؤسسية الرقمية</li></ul></article>
+          <article class="glass-panel p-8 rounded-3xl hover:border-orange-500/50 transition group relative overflow-hidden"><div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/15 transition"></div><div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-clapperboard" aria-hidden="true"></i></div><h3 class="text-xl font-bold mb-3">الإنتاج المرئي السينمائي</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">إعلانات تجارية، رسوم ثلاثية الأبعاد، وإنتاج بصري يروي قصة علامتك باحترافية.</p><ul class="space-y-2.5 text-xs text-gray-300"><li><i class="fa-solid fa-circle-check text-orange-500 ml-2" aria-hidden="true"></i> إنتاج إعلانات تجارية</li><li><i class="fa-solid fa-circle-check text-orange-500 ml-2" aria-hidden="true"></i> موشن جرافيك وتأثيرات بصرية</li></ul></article>
+          <article class="glass-panel p-8 rounded-3xl hover:border-blue-500/50 transition group relative overflow-hidden"><div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/15 transition"></div><div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div><h3 class="text-xl font-bold mb-3">الأداء التسويقي</h3><p class="text-gray-400 text-sm leading-relaxed mb-6">حملات مدعومة بالبيانات، إدارة قنوات التواصل، وتحسين مستمر للأداء.</p><ul class="space-y-2.5 text-xs text-gray-300"><li><i class="fa-solid fa-circle-check text-blue-400 ml-2" aria-hidden="true"></i> حملات إعلانية مستهدفة</li><li><i class="fa-solid fa-circle-check text-blue-400 ml-2" aria-hidden="true"></i> لوحات وتقارير تحليلية</li></ul></article>
         </div>
       </div>
     </section>
 
     <section id="estimator" class="py-24">
-      <div class="max-w-5xl mx-auto px-6">
-        <div class="glass-panel p-8 md:p-12 rounded-3xl glow-effect border border-brand/20">
-          <div class="text-center max-w-xl mx-auto mb-10"><span class="text-brand font-bold text-xs bg-brand/10 px-3 py-1 rounded-full">أداة تفاعلية</span><h2 class="text-2xl md:text-3xl font-black mt-4 mb-2">حاسبة نطاق وتكلفة المشاريع</h2><p class="text-gray-400 text-sm">حدد متطلبات مشروعك للحصول على تقدير أولي خلال ثوانٍ.</p></div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div><label for="serviceType" class="block text-sm font-bold text-gray-300 mb-3">1. حدد الخدمة الرئيسية:</label><select id="serviceType" class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-white text-sm"><option value="1200">هوية بصرية كاملة وبناء علامة</option><option value="2500">إنتاج مرئي وإعلاني متكامل</option><option value="1800">حملة تسويقية رقمية لمدة 3 أشهر</option><option value="3500">تطوير منصة رقمية وتجربة المستخدم</option></select></div>
-            <div><label for="timeframe" class="block text-sm font-bold text-gray-300 mb-3">2. الجدول الزمني المستهدف:</label><select id="timeframe" class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-white text-sm"><option value="1">قياسي (مسار العمل الطبيعي)</option><option value="1.3">مكثف / سريع</option><option value="1.6">أولوية قصوى</option></select></div>
-          </div>
-          <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div><span class="text-gray-400 text-xs block mb-1">التقدير المالي المبدئي:</span><div class="text-3xl font-black text-brand" id="estimatedPrice" aria-live="polite">$1,200 <span class="text-xs text-gray-400 font-normal">تقدير أولي</span></div></div>
-            <button type="button" data-open-contact class="w-full sm:w-auto bg-gradient-to-r from-brand to-orange-500 hover:opacity-90 text-white px-8 py-3.5 rounded-xl font-bold text-sm transition">اعتماد النطاق وطلب استشارة</button>
-          </div>
-          <p class="text-gray-500 text-xs mt-5">الأسعار تقديرية بالدولار الأمريكي ولا تمثل عرض سعر ملزماً.</p>
+      <div class="max-w-5xl mx-auto px-6"><div class="glass-panel p-8 md:p-12 rounded-3xl glow-effect border border-brand/20">
+        <div class="text-center max-w-xl mx-auto mb-10"><span class="text-brand font-bold text-xs bg-brand/10 px-3.5 py-1.5 rounded-full">محرك تسعير تقديري</span><h2 class="text-2xl md:text-3xl font-black mt-4 mb-2">حاسبة نطاق التكلفة والمدة</h2><p class="text-gray-400 text-sm">حدد متغيرات مشروعك للحصول على تقدير أولي للتكلفة والمدة.</p></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div><label for="serviceType" class="block text-sm font-bold text-gray-300 mb-3">1. حدد نطاق الخدمة:</label><select id="serviceType" class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm"><option value="1500">هوية بصرية مؤسسية شاملة</option><option value="3200">إنتاج مرئي وإعلاني متكامل</option><option value="2400">إدارة الحملات التسويقية والنمو (3 أشهر)</option><option value="4800">تطوير منصة رقمية وبناء منتج تفاعلي</option></select></div>
+          <div><label for="timeframe" class="block text-sm font-bold text-gray-300 mb-3">2. سرعة وأولوية التنفيذ:</label><select id="timeframe" class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm"><option value="1">المسار القياسي</option><option value="1.25">مسار مكثف</option><option value="1.5">أولوية قصوى</option></select></div>
         </div>
-      </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6"><div><span class="text-gray-400 text-xs block mb-1">التقدير المالي:</span><div class="text-4xl font-black text-brand" id="estimatedPrice" aria-live="polite">$1,500 <span class="text-xs text-gray-400 font-normal">تقدير أولي</span></div></div><button type="button" id="saveEstimate" class="w-full sm:w-auto bg-gradient-to-r from-brand to-orange-500 hover:opacity-90 text-white px-8 py-4 rounded-2xl font-bold text-sm transition shadow-lg shadow-brand/30 flex items-center justify-center gap-2"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> حفظ التقدير</button></div>
+        <p class="text-gray-500 text-xs mt-5">الأسعار تقديرية بالدولار الأمريكي ولا تمثل عرض سعر ملزماً. التقدير والمدة الفعلية يحتاجان إلى مراجعة فريق العمل.</p>
+      </div></div>
     </section>
 
     <section id="ai-hub" class="py-24 bg-cardBg/50 border-t border-white/5">
       <div class="max-w-7xl mx-auto px-6"><div class="flex flex-col md:flex-row items-center justify-between gap-12">
-        <div class="w-full md:w-1/2"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-4"><i class="fa-solid fa-microchip" aria-hidden="true"></i> أدوات ابتكار ذكية</div><h2 class="text-3xl md:text-4xl font-black mb-6">مساعد Red Frog AI لصياغة الاستراتيجيات</h2><p class="text-gray-400 text-sm leading-relaxed mb-6">اكتب فكرة مشروعك للحصول على نموذج توضيحي لهيكل خطة تسويقية وإبداعية. هذه النسخة التجريبية لا تتصل بنموذج ذكاء اصطناعي أو بيانات سوق حقيقية.</p><div class="space-y-3"><div class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-circle-check text-brand" aria-hidden="true"></i> تنظيم نقاط البداية والفرص المحتملة</div><div class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-circle-check text-brand" aria-hidden="true"></i> اقتراح رسائل وقنوات تسويقية أولية</div></div></div>
-        <div class="w-full md:w-1/2 glass-panel p-6 rounded-2xl"><label for="aiPromptInput" class="block text-xs font-bold text-gray-300 mb-2">اكتب فكرة مشروعك أو علامتك التجارية:</label><textarea id="aiPromptInput" rows="4" maxlength="1000" class="w-full bg-darkBg border border-white/10 rounded-xl p-4 text-white text-sm mb-4" placeholder="مثال: شركة عقارية ترغب في إطلاق حملة تسويقية بصرية..."></textarea><button type="button" id="runAi" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> إعداد تصور مبدئي</button><div id="aiResultBox" class="mt-4 p-4 rounded-xl bg-darkBg/80 border border-white/5 text-sm text-gray-300 hidden leading-relaxed" aria-live="polite"></div></div>
+        <div class="w-full md:w-1/2"><div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-4"><i class="fa-solid fa-brain" aria-hidden="true"></i> مساعد تخطيط تجريبي</div><h2 class="text-3xl md:text-4xl font-black mb-6">مساعد Red Frog AI الاستراتيجي</h2><p class="text-gray-400 text-sm leading-relaxed mb-6">أدخل تفاصيل نشاطك للحصول على تصور أولي لخطة عمل وتسويق. هذه النسخة محاكاة محلية ولا تتصل بنموذج ذكاء اصطناعي أو بيانات سوق حقيقية.</p><div class="space-y-3 mb-8"><div class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-circle-check text-brand" aria-hidden="true"></i> تنظيم نقاط القوة والتميز المحتملة</div><div class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-circle-check text-brand" aria-hidden="true"></i> اقتراح رسائل وقنوات تسويقية أولية</div></div></div>
+        <div class="w-full md:w-1/2 glass-panel p-6 md:p-8 rounded-3xl border border-white/10 shadow-xl"><label for="aiPromptInput" class="block text-xs font-bold text-gray-300 mb-2">اكتب فكرة مشروعك أو علامتك التجارية:</label><textarea id="aiPromptInput" rows="4" maxlength="1000" class="w-full bg-darkBg border border-white/10 rounded-2xl p-4 text-white text-sm mb-4" placeholder="مثال: شركة تطوير عقاري ترغب في إطلاق حملة رقمية..."></textarea><button type="button" id="runAi" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:opacity-90 text-white py-3.5 rounded-2xl font-bold text-sm transition flex items-center justify-center gap-2"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> إعداد تصور استراتيجي مبدئي</button><div id="aiResultBox" class="mt-4 p-5 rounded-2xl bg-darkBg/90 border border-white/10 text-sm text-gray-200 hidden leading-relaxed" aria-live="polite"></div></div>
       </div></div>
     </section>
+
+    <section id="dashboard" class="py-20 border-t border-white/5"><div class="max-w-7xl mx-auto px-6"><div class="flex items-center justify-between mb-8"><div><h2 class="text-xl font-black text-white">سجل التقديرات المحفوظة</h2><p class="text-xs text-gray-400">تُحفظ هذه البيانات محلياً في متصفحك فقط.</p></div><button type="button" id="clearDashboard" class="text-xs text-red-400 hover:text-red-300 transition">مسح السجل</button></div><div class="glass-panel p-4 md:p-6 rounded-3xl overflow-x-auto"><table class="w-full min-w-[640px] text-right text-xs text-gray-300"><thead><tr class="border-b border-white/10 text-gray-400"><th scope="col" class="pb-3 px-4">رقم العملية</th><th scope="col" class="pb-3 px-4">نوع الخدمة</th><th scope="col" class="pb-3 px-4">التقدير</th><th scope="col" class="pb-3 px-4">التاريخ والوقت</th><th scope="col" class="pb-3 px-4">الحالة</th></tr></thead><tbody id="savedProjectsTable"><tr><td colspan="5" class="py-6 text-center text-gray-500">جارٍ تحميل السجل...</td></tr></tbody></table></div></div></section>
   </main>
 
-  <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-    <div class="glass-panel p-8 rounded-3xl max-w-lg w-full mx-4 border border-brand/30 relative max-h-[90vh] overflow-y-auto">
-      <button type="button" id="closeModal" class="absolute top-4 left-4 text-gray-400 hover:text-white text-xl" aria-label="إغلاق النافذة"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-      <h2 id="modalTitle" class="text-2xl font-black mb-2">ابدأ رحلة النجاح معنا</h2><p class="text-gray-400 text-xs mb-6">املأ البيانات وسيتواصل معك فريق الاستشارات لتنسيق خطة العمل.</p>
-      <form id="contactForm" class="space-y-4">
-        <div><label for="contactName" class="block text-xs font-bold text-gray-300 mb-1">الاسم الكريم</label><input id="contactName" name="name" type="text" autocomplete="name" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-white text-sm" placeholder="الاسم الكامل"></div>
-        <div><label for="contactInfo" class="block text-xs font-bold text-gray-300 mb-1">رقم الهاتف أو البريد الإلكتروني</label><input id="contactInfo" name="contact" type="text" autocomplete="email" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-white text-sm" placeholder="name@example.com"></div>
-        <div><label for="projectDetails" class="block text-xs font-bold text-gray-300 mb-1">تفاصيل إضافية عن المشروع</label><textarea id="projectDetails" name="details" rows="3" class="w-full bg-darkBg border border-white/10 rounded-xl p-4 text-white text-sm" placeholder="أخبرنا باحتياجاتك..."></textarea></div>
-        <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white py-3.5 rounded-xl font-bold text-sm transition">إرسال الطلب</button>
-      </form>
-      <p id="formNotice" class="hidden mt-4 text-sm text-green-400" role="status">تم التحقق من النموذج. لإرسال الطلب فعلياً، يلزم ربطه بخدمة خلفية.</p>
-    </div>
-  </div>
+  <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true"><div class="glass-panel p-8 md:p-10 rounded-3xl max-w-lg w-full mx-4 border border-brand/30 relative shadow-2xl max-h-[90vh] overflow-y-auto"><button type="button" id="closeModal" class="absolute top-5 left-5 text-gray-400 hover:text-white text-xl" aria-label="إغلاق النافذة"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><h2 id="modalTitle" class="text-2xl font-black mb-2 text-white">ابدأ مشروعك معنا</h2><p class="text-gray-400 text-xs mb-6">املأ بيانات التواصل. هذا النموذج تجريبي ولا يرسل البيانات إلى خادم.</p><form id="contactForm" class="space-y-4"><div><label for="clientName" class="block text-xs font-bold text-gray-300 mb-1.5">الاسم الكريم</label><input type="text" id="clientName" name="name" autocomplete="name" required class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm" placeholder="الاسم الكامل"></div><div><label for="clientContact" class="block text-xs font-bold text-gray-300 mb-1.5">رقم الهاتف أو البريد الإلكتروني</label><input type="text" id="clientContact" name="contact" required class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm" placeholder="البريد الإلكتروني أو رقم الهاتف"></div><div><label for="clientNotes" class="block text-xs font-bold text-gray-300 mb-1.5">ملاحظات أو متطلبات إضافية</label><textarea id="clientNotes" name="notes" rows="3" class="w-full bg-darkBg border border-white/10 rounded-2xl p-4 text-white text-sm" placeholder="اذكر أي تفاصيل إضافية..."></textarea></div><button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white py-4 rounded-2xl font-bold text-sm transition flex items-center justify-center gap-2"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> التحقق من الطلب</button></form><p id="formNotice" class="hidden mt-4 text-sm text-green-400" role="status">تم التحقق من البيانات محلياً. لم يتم إرسالها؛ يلزم ربط النموذج بخدمة خلفية لإتمام الإرسال.</p></div></div>
 
-  <footer class="mt-auto py-10 border-t border-white/10 bg-darkBg text-center text-xs text-gray-500"><div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"><div class="flex items-center gap-2"><span class="w-6 h-6 rounded-lg bg-brand flex items-center justify-center text-white"><i class="fa-solid fa-frog" aria-hidden="true"></i></span><span class="font-bold text-gray-300">RED FROG ELITE SYSTEM</span></div><p>جميع الحقوق محفوظة © 2026 — تصميم وتطوير استراتيجي متكامل.</p></div></footer>
+  <footer class="mt-auto py-12 border-t border-white/10 bg-darkBg text-center text-xs text-gray-500"><div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"><div class="flex items-center gap-2"><span class="w-6 h-6 rounded-lg bg-brand flex items-center justify-center text-white"><i class="fa-solid fa-frog" aria-hidden="true"></i></span><span class="font-bold text-gray-300">RED FROG ELITE SYSTEM</span></div><p>جميع الحقوق محفوظة © 2026 — حلول رقمية واستراتيجية متكاملة.</p></div></footer>
 
   <script>
     const serviceSelect = document.getElementById('serviceType');
     const timeframeSelect = document.getElementById('timeframe');
     const priceDisplay = document.getElementById('estimatedPrice');
+    const storageKey = 'redFrogProjects';
+
     function updateEstimate() {
-      const amount = Math.round(Number(serviceSelect.value) * Number(timeframeSelect.value));
-      priceDisplay.innerHTML = `$${amount.toLocaleString('en-US')} <span class="text-xs text-gray-400 font-normal">تقدير أولي</span>`;
+      const price = Math.round(Number(serviceSelect.value) * Number(timeframeSelect.value));
+      priceDisplay.innerHTML = `$${price.toLocaleString('en-US')} <span class="text-xs text-gray-400 font-normal">تقدير أولي</span>`;
+      return price;
     }
     serviceSelect.addEventListener('change', updateEstimate);
     timeframeSelect.addEventListener('change', updateEstimate);
 
+    function readSavedProjects() {
+      try {
+        const records = JSON.parse(localStorage.getItem(storageKey) || '[]');
+        return Array.isArray(records) ? records.filter(record => record && typeof record.id === 'string' && typeof record.service === 'string' && typeof record.price === 'string' && typeof record.date === 'string' && typeof record.status === 'string').slice(0, 50) : [];
+      } catch (_) { return []; }
+    }
+    function renderSavedProjects() {
+      const tbody = document.getElementById('savedProjectsTable');
+      const saved = readSavedProjects();
+      tbody.replaceChildren();
+      if (!saved.length) {
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 5;
+        cell.className = 'py-6 text-center text-gray-500';
+        cell.textContent = 'لا توجد تقديرات محفوظة حتى الآن. استخدم الحاسبة أعلاه.';
+        row.appendChild(cell);
+        tbody.appendChild(row);
+        return;
+      }
+      saved.forEach(item => {
+        const row = document.createElement('tr');
+        row.className = 'border-b border-white/5 hover:bg-white/5 transition';
+        [item.id, item.service, item.price, item.date, item.status].forEach((value, index) => {
+          const cell = document.createElement('td');
+          cell.className = 'py-3 px-4';
+          if (index === 0) cell.classList.add('font-bold', 'text-brand');
+          if (index === 2) cell.classList.add('font-bold', 'text-white');
+          cell.textContent = value;
+          row.appendChild(cell);
+        });
+        tbody.appendChild(row);
+      });
+    }
+    function saveProjectEstimate() {
+      const currentPrice = updateEstimate();
+      const now = new Date();
+      const newRecord = {
+        id: `RF-${now.getTime().toString().slice(-8)}`,
+        service: serviceSelect.options[serviceSelect.selectedIndex].text,
+        price: `$${currentPrice.toLocaleString('en-US')}`,
+        date: `${now.toLocaleDateString('ar-EG')} ${now.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' })}`,
+        status: 'تقدير محلي'
+      };
+      try {
+        const saved = readSavedProjects();
+        saved.unshift(newRecord);
+        localStorage.setItem(storageKey, JSON.stringify(saved.slice(0, 50)));
+        renderSavedProjects();
+        alert('تم حفظ التقدير محلياً في سجل المتصفح.');
+      } catch (_) { alert('تعذر حفظ التقدير. تحقق من إعدادات التخزين في المتصفح.'); }
+    }
+    document.getElementById('saveEstimate').addEventListener('click', saveProjectEstimate);
+    document.getElementById('clearDashboard').addEventListener('click', () => {
+      if (confirm('هل تريد مسح سجل التقديرات المحفوظ محلياً؟')) {
+        try { localStorage.removeItem(storageKey); } catch (_) { /* Storage may be unavailable. */ }
+        renderSavedProjects();
+      }
+    });
+    renderSavedProjects();
+
+    document.getElementById('runAi').addEventListener('click', () => {
+      const prompt = document.getElementById('aiPromptInput').value.trim();
+      const result = document.getElementById('aiResultBox');
+      result.replaceChildren();
+      result.classList.remove('hidden');
+      if (!prompt) { result.textContent = 'الرجاء إدخال فكرة المشروع أو العلامة أولاً.'; return; }
+      const title = document.createElement('strong');
+      title.className = 'text-blue-400 block mb-2';
+      title.textContent = 'تصور إرشادي تجريبي — ليس تحليلاً فعلياً للسوق';
+      const intro = document.createElement('p');
+      intro.textContent = 'انطلاقاً من وصفك، ابدأ بتحديد جمهور واضح ومشكلة محددة يحلها مشروعك، ثم اختبر عرض القيمة قبل توسيع الحملة.';
+      const list = document.createElement('ul');
+      list.className = 'mt-3 space-y-1';
+      ['صياغة عرض قيمة مميز يمكن قياسه.', 'إعداد محتوى بصري متسق مع هوية العلامة.', 'اختبار القنوات وقياس التفاعل والتحويل.'].forEach((text, index) => {
+        const item = document.createElement('li');
+        item.textContent = `• الخطوة ${index + 1}: ${text}`;
+        list.appendChild(item);
+      });
+      result.append(title, intro, list);
+    });
+
     const modal = document.getElementById('contactModal');
-    const openButtons = document.querySelectorAll('[data-open-contact]');
-    const closeButton = document.getElementById('closeModal');
-    let previousFocus;
+    let previousFocus = null;
     function openContactModal() {
       previousFocus = document.activeElement;
       modal.classList.remove('hidden');
       modal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('overflow-hidden');
-      document.getElementById('contactName').focus();
+      document.getElementById('clientName').focus();
     }
     function closeContactModal() {
       modal.classList.add('hidden');
       modal.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('overflow-hidden');
-      if (previousFocus) previousFocus.focus();
+      if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
     }
-    openButtons.forEach(button => button.addEventListener('click', openContactModal));
-    closeButton.addEventListener('click', closeContactModal);
+    document.querySelectorAll('[data-open-contact]').forEach(button => button.addEventListener('click', openContactModal));
+    document.getElementById('closeModal').addEventListener('click', closeContactModal);
     modal.addEventListener('click', event => { if (event.target === modal) closeContactModal(); });
     document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeContactModal(); });
-
-    document.getElementById('runAi').addEventListener('click', () => {
-      const prompt = document.getElementById('aiPromptInput').value.trim();
-      const result = document.getElementById('aiResultBox');
-      if (!prompt) {
-        result.textContent = 'الرجاء إدخال فكرة المشروع أولاً.';
-        result.classList.remove('hidden');
-        return;
-      }
-      result.innerHTML = '<strong class="text-brand block mb-2">تصور تجريبي — ليس تحليلاً فعلياً للسوق</strong><p>ابدأ بتحديد الجمهور المستهدف والمشكلة التي يحلها مشروعك، ثم اختبر رسالة واضحة عبر قناة مناسبة قبل توسيع الحملة.</p><ul class="mt-3 space-y-1"><li>• <b>الخطوة الأولى:</b> صياغة عرض قيمة مميز يمكن قياسه.</li><li>• <b>الخطوة الثانية:</b> إعداد محتوى بصري متسق مع هوية العلامة.</li><li>• <b>الخطوة الثالثة:</b> تجربة القنوات وقياس التفاعل والتحويل.</li></ul>';
-      result.classList.remove('hidden');
-    });
     document.getElementById('contactForm').addEventListener('submit', event => {
       event.preventDefault();
       document.getElementById('formNotice').classList.remove('hidden');
-      event.currentTarget.reset();
     });
   </script>
 </body>
