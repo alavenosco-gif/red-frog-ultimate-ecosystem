@@ -1,96 +1,150 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="dark">
+<html lang="ar" dir="rtl" class="dark" id="htmlRoot">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Frog Sovereign | المنظومة الرقمية الصادقة</title>
+    <title>Red Frog Sovereign | Global Autonomous Enterprise Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { DEFAULT: '#ff3366', dark: '#cc0033', light: '#ff6688' },
+                        darkBg: '#010103',
+                        cardBg: '#050508'
+                    },
+                    fontFamily: { cairo: ['Cairo', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #050507; color: #f3f4f6; }
-        .glass-panel { background: rgba(15, 15, 20, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        body { font-family: 'Cairo', sans-serif; background-color: #010103; color: #f3f4f6; overflow-x: hidden; }
+        .glass-panel { background: rgba(5, 5, 8, 0.9); backdrop-filter: blur(36px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glow-effect { box-shadow: 0 0 120px rgba(255, 51, 102, 0.2); }
+        .text-gradient { background: linear-gradient(135deg, #ff3366 0%, #ff9900 40%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="bg-darkBg text-gray-100 min-h-screen flex flex-col selection:bg-brand selection:text-white">
 
     <!-- Header -->
-    <header class="glass-panel border-b border-white/10 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center text-white font-bold">RF</div>
-                <span class="text-lg font-bold tracking-wider">RED FROG <span class="text-red-500">SOVEREIGN</span></span>
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand to-emerald-500 flex items-center justify-center glow-effect shadow-lg">
+                    <i class="fa-solid fa-frog text-white text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider text-white block leading-tight">RED FROG <span class="text-brand">SOVEREIGN</span></span>
+                    <span class="text-[9px] text-gray-400 tracking-widest uppercase font-semibold">Autonomous Global Architecture</span>
+                </div>
             </div>
-            <button onclick="openModal()" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">
-                تواصل معنا
-            </button>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button onclick="openModal()" class="bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-brand/30 flex items-center gap-2">
+                    <i class="fa-solid fa-crown"></i> <span>تفعيل التشغيل المباشر</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero -->
-    <main class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <div class="inline-block px-4 py-1.5 rounded-full bg-red-500/10 text-red-400 text-xs font-semibold mb-6 border border-red-500/20">
-            حلول رقمية وأتمتة حقيقية
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold mb-6">
+                <i class="fa-solid fa-microchip"></i> المنظومة السيبرانية الذكية للتحليل والتوسع التجاري العالمي
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6">
+                هندسة الأتمتة المتقدمة <br><span class="text-gradient">والتحليل الاستراتيجي الذكي</span>
+            </h1>
+            <p class="text-gray-400 text-base md:text-lg mb-12 max-w-2xl mx-auto font-light">
+                نظم برمجية متكاملة تربط عملياتك الرقمية ببوابات التحصيل العالمية وتوليد خطط السوق عبر محركات الذكاء الاصطناعي الحقيقية.
+            </p>
         </div>
-        <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
-            بناء الأنظمة الرقمية <span class="text-red-500">بدون مبالغات أو وعود زائفة</span>
-        </h1>
-        <p class="text-gray-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-            نساعدك في إعداد أدوات الأتمتة، ربط قنوات التواصل، وتخطيط استراتيجيات التسويق بناءً على أرقام وافتراضات واقعية قابلة للاختبار.
-        </p>
+    </section>
 
-        <!-- AI Plan Generator Box -->
-        <div class="glass-panel p-6 md:p-8 rounded-2xl text-right mb-16 shadow-2xl">
-            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-wand-magic-sparkles text-red-500"></i> مولّد خطط السوق التجريبي (بالذكاء الاصطناعي الحقيقي)
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <!-- Direct Payments Section (PayPal & InstaPay) -->
+    <section class="py-12 px-6 bg-cardBg/30 border-t border-b border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl font-black mb-4">بوابات التحصيل والاعتماد المالي المباشر</h2>
+            <p class="text-gray-400 text-sm mb-8">قنوات الدفع الرسمية المعتمدة لإتمام المعاملات والاشتراكات:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <a href="https://paypal.me/MohyeldeenMohammad" target="_blank" class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition flex items-center gap-4 text-right shadow-xl">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-xl shrink-0"><i class="fa-brands fa-paypal"></i></div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">الدفع عبر PayPal</h4>
+                        <span class="text-xs text-gray-400">paypal.me/MohyeldeenMohammad</span>
+                    </div>
+                </a>
+                <a href="https://ipn.eg/S/mohyeldeen77/instapay/68QWUO" target="_blank" class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-purple-500/50 transition flex items-center gap-4 text-right shadow-xl">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">التحويل عبر InstaPay</h4>
+                        <span class="text-xs text-gray-400">mohyeldeen77@instapay</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Real Plan Generator Section -->
+    <section class="py-20 px-6 max-w-4xl mx-auto w-full">
+        <div class="glass-panel p-8 md:p-10 rounded-3xl border border-brand/20 shadow-2xl">
+            <div class="text-center mb-8">
+                <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 px-3.5 py-1.5 rounded-full">محرك الذكاء الاصطناعي الحقيقي</span>
+                <h2 class="text-2xl font-black mt-3 mb-2">مولّد استراتيجيات ودخول الأسواق</h2>
+                <p class="text-gray-400 text-sm">أدخل تفاصيل مشروعك وسيقوم خادم السيرفر باستدعاء نموذج Gemini لتحليل السوق وتقديم خطة واقعية.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-2">المنتج أو الخدمة:</label>
-                    <input type="text" id="productInput" placeholder="مثال: تطبيق توصيل، عبايات نسائية..." class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-red-500 focus:outline-none">
+                    <label class="block text-xs font-bold text-gray-300 mb-2">المنتج أو الخدمة:</label>
+                    <input type="text" id="productInput" placeholder="مثال: منصة تجارة إلكترونية، استشارات..." class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm focus:border-brand focus:outline-none transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-2">السوق المستهدف:</label>
-                    <input type="text" id="marketInput" placeholder="مثال: مصر، الخليج، أوربا..." class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-red-500 focus:outline-none">
+                    <label class="block text-xs font-bold text-gray-300 mb-2">السوق المستهدف:</label>
+                    <input type="text" id="marketInput" placeholder="مثال: السوق المصري، دول الخليج..." class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm focus:border-brand focus:outline-none transition">
                 </div>
             </div>
-            <button onclick="generateRealPlan()" id="planBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold text-sm transition">
-                توليد خطة حقيقية عبر السيرفر
+            <button onclick="generateRealPlan()" id="planBtn" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:opacity-90 text-white py-4 rounded-2xl font-bold text-sm transition shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> توليد الخطة الاستراتيجية عبر السيرفر
             </button>
-            <div id="planResult" class="mt-6 p-4 rounded-xl bg-black/60 border border-white/10 text-xs text-gray-300 hidden leading-relaxed whitespace-pre-line"></div>
+            <div id="planResult" class="mt-6 p-6 rounded-2xl bg-darkBg border border-white/10 text-xs text-gray-200 hidden leading-relaxed whitespace-pre-line"></div>
         </div>
-    </main>
+    </section>
 
-    <!-- Modal for Lead Form -->
-    <div id="contactModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden">
-        <div class="glass-panel p-8 rounded-2xl max-w-md w-full mx-4 relative">
-            <button onclick="closeModal()" class="absolute top-4 left-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            <h3 class="text-xl font-bold mb-2">إرسال طلب تواصل</h3>
-            <p class="text-gray-400 text-xs mb-6">يتم إرسال الطلب بشكل آمن عبر خادم السيرفر إلى تليجرام مباشرة.</p>
+    <!-- Modal for Telegram API Lead Generation -->
+    <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md hidden">
+        <div class="glass-panel p-8 rounded-3xl max-w-lg w-full mx-4 border border-brand/30 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-5 left-5 text-gray-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="text-2xl font-black mb-2 text-white">إرسال طلب التشغيل الفوري</h3>
+            <p class="text-gray-400 text-xs mb-6">يتم إرسال الطلب آمنًا عبر دالة Serverless إلى تليجرام الشخصي.</p>
             <form onsubmit="submitLead(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-1">الاسم:</label>
-                    <input type="text" id="leadName" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm focus:border-red-500 focus:outline-none">
+                    <label class="block text-xs font-bold text-gray-300 mb-1.5">الاسم الكريم:</label>
+                    <input type="text" id="leadName" required class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm focus:border-brand focus:outline-none">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-1">طريقة التواصل (هاتف أو بريد):</label>
-                    <input type="text" id="leadContact" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm focus:border-red-500 focus:outline-none">
+                    <label class="block text-xs font-bold text-gray-300 mb-1.5">وسيلة التواصل (هاتف أو بريد):</label>
+                    <input type="text" id="leadContact" required class="w-full bg-darkBg border border-white/10 rounded-2xl px-4 py-3.5 text-white text-sm focus:border-brand focus:outline-none">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-1">تفاصيل المشروع:</label>
-                    <textarea id="leadDetails" rows="3" required class="w-full bg-black/50 border border-white/10 rounded-xl p-3 text-sm focus:border-red-500 focus:outline-none"></textarea>
+                    <label class="block text-xs font-bold text-gray-300 mb-1.5">تفاصيل وأهداف المشروع:</label>
+                    <textarea id="leadDetails" rows="3" required class="w-full bg-darkBg border border-white/10 rounded-2xl p-4 text-white text-sm focus:border-brand focus:outline-none"></textarea>
                 </div>
-                <button type="submit" id="submitBtn" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold text-sm transition">
-                    إرسال الطلب
+                <button type="submit" id="submitBtn" class="w-full bg-brand hover:bg-brand-dark text-white py-4 rounded-2xl font-bold text-sm transition shadow-lg shadow-brand/30">
+                    إرسال الطلب عبر تليجرام (API)
                 </button>
             </form>
-            <div id="formMsg" class="mt-4 text-xs text-center"></div>
+            <div id="formMsg" class="mt-4 text-xs text-center font-bold"></div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 py-8 text-center text-xs text-gray-500">
-        <p>جميع الحقوق محفوظة © 2026 — التزام تام بالواقع والأمان التقني.</p>
+    <footer class="mt-auto py-10 border-t border-white/10 bg-darkBg text-center text-xs text-gray-500">
+        <p>RED FROG SOVEREIGN EMPIRE ARCHITECTURE © 2026 — كافة الحقوق محفوظة لـ Mohyeldeen.</p>
     </footer>
 
     <script>
@@ -104,14 +158,14 @@
             const btn = document.getElementById('planBtn');
 
             if(!product || !market) {
-                alert('يرجى إدخال المنتج والسوق المستهدف.');
+                alert('الرجاء إدخال المنتج والسوق المستهدف بدقة.');
                 return;
             }
 
             btn.disabled = true;
-            btn.textContent = 'جاري المعالجة عبر السيرفر...';
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري الاتصال بخادم الذكاء الاصطناعي...';
             resBox.classList.remove('hidden');
-            resBox.textContent = 'جاري الاتصال بنموذج الذكاء الاصطناعي وجلب تحليل واقعي...';
+            resBox.textContent = 'جاري تحليل المعطيات وجلب التقرير الاستراتيجي...';
 
             try {
                 const response = await fetch('/api/plan', {
@@ -123,13 +177,13 @@
                 if(response.ok) {
                     resBox.textContent = data.plan;
                 } else {
-                    resBox.textContent = 'خطأ: ' + (data.error || 'تعذر توليد الخطة.');
+                    resBox.textContent = 'خطأ من الخادم: ' + (data.error || 'تعذر معالجة الطلب.');
                 }
             } catch (err) {
-                resBox.textContent = 'حدث خطأ في الاتصال بالخادم.';
+                resBox.textContent = 'تعذر الاتصال بالخادم. تأكد من رفع ملفات الـ API وتفعيل متغيرات البيئة على Vercel.';
             } finally {
                 btn.disabled = false;
-                btn.textContent = 'توليد خطة حقيقية عبر السيرفر';
+                btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> توليد الخطة الاستراتيجية عبر السيرفر';
             }
         }
 
@@ -142,7 +196,7 @@
             const msg = document.getElementById('formMsg');
 
             btn.disabled = true;
-            btn.textContent = 'جاري الإرسال...';
+            btn.textContent = 'جاري الإرسال عبر السيرفر...';
             msg.textContent = '';
 
             try {
@@ -153,19 +207,19 @@
                 });
                 const data = await response.json();
                 if(response.ok) {
-                    msg.className = 'mt-4 text-xs text-center text-green-400';
-                    msg.textContent = 'تم إرسال طلبك بنجاح وسنتواصل معك قريباً.';
-                    setTimeout(() => { closeModal(); msg.textContent = ''; }, 3000);
+                    msg.className = 'mt-4 text-xs text-center text-emerald-400 font-bold';
+                    msg.textContent = 'تم إرسال الطلب بنجاح وتلقيت الإشعار الفوري على هاتفك!';
+                    setTimeout(() => { closeModal(); msg.textContent = ''; document.getElementById('contactModal').querySelector('form').reset(); }, 3000);
                 } else {
-                    msg.className = 'mt-4 text-xs text-center text-red-400';
-                    msg.textContent = 'فشل الإرسال: ' + (data.error || 'خطأ غير معروف');
+                    msg.className = 'mt-4 text-xs text-center text-red-400 font-bold';
+                    msg.textContent = 'فشل الإرسال: ' + (data.error || 'خطأ في الخادم');
                 }
             } catch (err) {
-                msg.className = 'mt-4 text-xs text-center text-red-400';
-                msg.textContent = 'تعذر الاتصال بالخادم الداخلي.';
+                msg.className = 'mt-4 text-xs text-center text-red-400 font-bold';
+                msg.textContent = 'تعذر الاتصال بدالة السيرفر (api/lead).';
             } finally {
                 btn.disabled = false;
-                btn.textContent = 'إرسال الطلب';
+                btn.textContent = 'إرسال الطلب عبر تليجرام (API)';
             }
         }
     </script>
